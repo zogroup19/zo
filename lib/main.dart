@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 
-main() {
+import './product_manager.dart';
+
+void main() {
   runApp(Zo());
+  return;
 }
 
 class Zo extends StatelessWidget {
+
   @override
-  build(context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("MY Zo GROUP"),backgroundColor: Color(22),
-        ),
+      theme: ThemeData(
+        primarySwatch: Colors.deepOrange
       ),
+      home: Scaffold(
+              appBar: AppBar(
+                 title: Text("MY Zo GROUP"),
+              ),
+              body: ProductManager(startingText: "game")
+      )
     );
   }
 }
